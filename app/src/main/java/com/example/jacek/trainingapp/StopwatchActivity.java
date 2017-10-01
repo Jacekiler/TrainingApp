@@ -1,6 +1,8 @@
 package com.example.jacek.trainingapp;
 
 import android.content.Intent;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,10 +17,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class StopwatchActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+public class StopwatchActivity extends BasicActivity
 {
-    Toolbar toolbar;
-    DrawerLayout drawer;
 
     TextView time;
     Button startButton;
@@ -26,6 +26,25 @@ public class StopwatchActivity extends AppCompatActivity implements NavigationVi
     Button lapButton;
     Button resumeButton;
     Button resetButton;
+    Handler handler = new Handler();
+    long startTime = 0L;
+    long timeInMilliseconds = 0L;
+    long timeSwapBuff = 0L;
+    long updateTime = 0L;
+
+    Runnable updateTimeThread = new Runnable() {
+        @Override
+        public void run() {
+            timeInMilliseconds = SystemClock.uptimeMillis()-startTime;
+            updateTime = timeSwapBuff+timeInMilliseconds;
+            int secs = (int)(updateTime/1000);
+            int mins = secs/60;
+            secs %= 60;
+            int milliseconds = (int)(updateTime%1000);
+            time.setText(String.format("%02d",mins)+":"+String.format("%02d",secs)+":"+String.format("%02d",milliseconds));
+            handler.postDelayed(this,0);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -33,19 +52,18 @@ public class StopwatchActivity extends AppCompatActivity implements NavigationVi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stopwatch);
 
-
-
-
-
+        // Czy coś z tego da się przenieść do BasicActivity (nadklasa)
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        drawer = (DrawerLayout)findViewById(R.id.drawer_layout2);
+        drawer = (DrawerLayout)findViewById(R.id.stopwatch_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView)findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        // koniec
+
 
         time = (TextView)findViewById(R.id.textView);
         startButton = (Button)findViewById(R.id.buttonStart);
@@ -59,6 +77,8 @@ public class StopwatchActivity extends AppCompatActivity implements NavigationVi
             @Override
             public void onClick(View v)
             {
+                startTime = SystemClock.uptimeMillis();
+                handler.postDelayed(updateTimeThread,0);
                 startButton.setVisibility(View.INVISIBLE);
                 stopButton.setVisibility(View.VISIBLE);
                 lapButton.setVisibility(View.VISIBLE);
@@ -70,6 +90,8 @@ public class StopwatchActivity extends AppCompatActivity implements NavigationVi
             @Override
             public void onClick(View v)
             {
+                timeSwapBuff += timeInMilliseconds;
+                handler.removeCallbacks(updateTimeThread);
 
                 stopButton.setVisibility(View.INVISIBLE);
                 lapButton.setVisibility(View.INVISIBLE);
@@ -92,6 +114,9 @@ public class StopwatchActivity extends AppCompatActivity implements NavigationVi
             @Override
             public void onClick(View v)
             {
+                startTime = SystemClock.uptimeMillis();
+                handler.postDelayed(updateTimeThread,0);
+
                 resumeButton.setVisibility(View.INVISIBLE);
                 resetButton.setVisibility(View.INVISIBLE);
                 stopButton.setVisibility(View.VISIBLE);
@@ -104,6 +129,8 @@ public class StopwatchActivity extends AppCompatActivity implements NavigationVi
             @Override
             public void onClick(View v)
             {
+                resetStopwatch();
+
                 resumeButton.setVisibility(View.INVISIBLE);
                 resetButton.setVisibility(View.INVISIBLE);
                 startButton.setVisibility(View.VISIBLE);
@@ -114,97 +141,18 @@ public class StopwatchActivity extends AppCompatActivity implements NavigationVi
 
     }
 
-    @Override
-    public void onBackPressed()
+    public void resetStopwatch()
     {
-        if (drawer.isDrawerOpen(GravityCompat.START))
-        {
-            drawer.closeDrawer(GravityCompat.START);
-        }
-        else
-        {
-            super.onBackPressed();
-        }
+        time.setText(String.format("%02d",0)+":"+String.format("%02d",0)+":"+String.format("%02d",0));
+        startTime = 0L;
+        timeInMilliseconds = 0L;
+        timeSwapBuff = 0L;
+        updateTime = 0L;
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        switch(item.getItemId())
-        {
-            case R.id.settings:
-
-                return true;
-            case R.id.author:
-
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
 
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item)
-    {
-        switch(item.getItemId())
-        {
-            case R.id.nav_home:
-            {
-                Intent home_intent = new Intent(this,MainActivity.class);
-                startActivity(home_intent);
-                closeDrawer();
-                return true;
-            }
-            case R.id.nav_timers:
-            {
-                closeDrawer();
-                return true;
-            }
-            case R.id.nav_stopwatch:
-                Intent stopwatch_intent = new Intent(this,StopwatchActivity.class);
-                startActivity(stopwatch_intent);
-                closeDrawer();
-                return true;
-            case R.id.nav_calculators:
-            {
-                closeDrawer();
-                return true;
-            }
-            case R.id.nav_calories:
-            {
-                closeDrawer();
-                return true;
-            }
-            case R.id.nav_5:
-            {
-                closeDrawer();
-                return true;
-            }
-            case R.id.nav_6:
-            {
-                closeDrawer();
-                return true;
-            }
-            default:
-                closeDrawer();
-                return true;
-        }
-
-    }
-
-    public void closeDrawer()
-    {
-        drawer.closeDrawer(GravityCompat.START);
-    }
 
 
 }

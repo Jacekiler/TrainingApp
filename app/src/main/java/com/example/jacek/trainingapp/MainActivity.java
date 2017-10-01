@@ -17,10 +17,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+public class MainActivity extends BasicActivity
 {
-    Toolbar toolbar;
-    DrawerLayout drawer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -28,109 +27,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        // Czy coś z tego da się przenieść do BasicActivity (nadklasa)
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        drawer = (DrawerLayout)findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout)findViewById(R.id.main_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView)findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
+        // koniec
 
 
     }
 
-    @Override
-    public void onBackPressed()
-    {
-        if (drawer.isDrawerOpen(GravityCompat.START))
-        {
-            drawer.closeDrawer(GravityCompat.START);
-        }
-        else
-        {
-            super.onBackPressed();
-        }
-    }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.menu,menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item)
-    {
-        switch(item.getItemId())
-        {
-            case R.id.settings:
-
-                return true;
-            case R.id.author:
-
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item)
-    {
-        switch(item.getItemId())
-        {
-            case R.id.nav_home:
-            {
-                Intent home_intent = new Intent(this,MainActivity.class);
-                startActivity(home_intent);
-                closeDrawer();
-                return true;
-            }
-                case R.id.nav_timers:
-            {
-                closeDrawer();
-                return true;
-            }
-            case R.id.nav_stopwatch:
-                Intent stopwatch_intent = new Intent(this,StopwatchActivity.class);
-                startActivity(stopwatch_intent);
-                closeDrawer();
-                return true;
-            case R.id.nav_calculators:
-            {
-                closeDrawer();
-                return true;
-            }
-            case R.id.nav_calories:
-            {
-                closeDrawer();
-                return true;
-            }
-            case R.id.nav_5:
-            {
-                closeDrawer();
-                return true;
-            }
-            case R.id.nav_6:
-            {
-                closeDrawer();
-                return true;
-            }
-            default:
-                closeDrawer();
-                return true;
-        }
-
-    }
-
-    public void closeDrawer()
-    {
-        drawer.closeDrawer(GravityCompat.START);
-    }
 }

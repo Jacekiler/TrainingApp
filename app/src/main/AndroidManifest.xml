@@ -5,20 +5,27 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        >
+        <activity android:name=".MainActivity"
+            android:label="Training">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TimersActivity" />
-        <activity android:name=".StopwatchActivity" />
-        <activity android:name=".CaloriesActivity" />
+        <activity android:name=".TimersActivity"
+            android:label="Timery"
+            />
+        <activity android:name=".StopwatchActivity"
+            android:label="Stoper"
+            />
+        <activity android:name=".CaloriesActivity"
+            android:label="Kalorie"
+            />
     </application>
 
 </manifest>

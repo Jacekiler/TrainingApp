@@ -1,26 +1,24 @@
 package com.example.jacek.trainingapp;
 
-import android.content.Intent;
+import android.content.Context;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class StopwatchActivity extends BasicActivity
 {
 
-    TextView time;
+    int lapsCounter;
+    TextView textTime;
     Button startButton;
     Button stopButton;
     Button lapButton;
@@ -31,6 +29,7 @@ public class StopwatchActivity extends BasicActivity
     long timeInMilliseconds = 0L;
     long timeSwapBuff = 0L;
     long updateTime = 0L;
+    LinearLayout lapsContainer;
 
     Runnable updateTimeThread = new Runnable() {
         @Override
@@ -40,8 +39,8 @@ public class StopwatchActivity extends BasicActivity
             int secs = (int)(updateTime/1000);
             int mins = secs/60;
             secs %= 60;
-            int milliseconds = (int)(updateTime%1000);
-            time.setText(String.format("%02d",mins)+":"+String.format("%02d",secs)+":"+String.format("%02d",milliseconds));
+            int milliseconds = (int)(updateTime%100);
+            textTime.setText(String.format("%02d",mins)+":"+String.format("%02d",secs)+":"+String.format("%02d",milliseconds));
             handler.postDelayed(this,0);
         }
     };
@@ -65,12 +64,14 @@ public class StopwatchActivity extends BasicActivity
         // koniec
 
 
-        time = (TextView)findViewById(R.id.textView);
+        textTime = (TextView)findViewById(R.id.textView);
         startButton = (Button)findViewById(R.id.buttonStart);
         stopButton = (Button)findViewById(R.id.buttonStop);
         lapButton = (Button)findViewById(R.id.buttonLap);
         resumeButton = (Button)findViewById(R.id.buttonResume);
         resetButton = (Button)findViewById(R.id.buttonReset);
+        lapsContainer = (LinearLayout)findViewById(R.id.lapsContainer);
+        lapsCounter = 1;
 
         startButton.setOnClickListener(new View.OnClickListener()
         {
@@ -105,6 +106,11 @@ public class StopwatchActivity extends BasicActivity
             @Override
             public void onClick(View v)
             {
+                LayoutInflater inflater = (LayoutInflater)getBaseContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                View addView = inflater.inflate(R.layout.row,null);
+                TextView txtValue = (TextView)addView.findViewById(R.id.textContent);
+                txtValue.setText((lapsCounter++)+". "+textTime.getText());
+                lapsContainer.addView(addView);
 
             }
         });
@@ -131,6 +137,7 @@ public class StopwatchActivity extends BasicActivity
             {
                 resetStopwatch();
 
+
                 resumeButton.setVisibility(View.INVISIBLE);
                 resetButton.setVisibility(View.INVISIBLE);
                 startButton.setVisibility(View.VISIBLE);
@@ -143,11 +150,13 @@ public class StopwatchActivity extends BasicActivity
 
     public void resetStopwatch()
     {
-        time.setText(String.format("%02d",0)+":"+String.format("%02d",0)+":"+String.format("%02d",0));
+        textTime.setText(String.format("%02d",0)+":"+String.format("%02d",0)+":"+String.format("%02d",0));
         startTime = 0L;
         timeInMilliseconds = 0L;
         timeSwapBuff = 0L;
         updateTime = 0L;
+        lapsContainer.removeAllViews();
+        lapsCounter = 1;
     }
 
 

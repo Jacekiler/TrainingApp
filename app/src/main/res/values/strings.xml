@@ -5,8 +5,15 @@
 
     <string name="zerosStopwatch">00:00:00</string>
 
-    <string name="toolbar_height">50dp</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="choose_calculator">wybierz</string>
+
+    <string-array name="calculators_array">
+        <item>BMI</item>
+        <item>BMR</item>
+    </string-array>
+
 </resources>

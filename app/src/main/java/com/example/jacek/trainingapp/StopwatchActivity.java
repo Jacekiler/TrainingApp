@@ -8,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -36,10 +37,13 @@ public class StopwatchActivity extends BasicActivity
         public void run() {
             timeInMilliseconds = SystemClock.uptimeMillis()-startTime;
             updateTime = timeSwapBuff+timeInMilliseconds;
+
+            int milliseconds = (int)(updateTime%1000/10);   // /10 -> zmniejszenie z trzycyfrowej do dwucyfrowej -> sprobowac formatowaniem zamiast tego
             int secs = (int)(updateTime/1000);
             int mins = secs/60;
             secs %= 60;
-            int milliseconds = (int)(updateTime%100);
+//            mins %= 60;   // przy uzyciu %60 trzeba dodac godziny
+
             textTime.setText(String.format("%02d",mins)+":"+String.format("%02d",secs)+":"+String.format("%02d",milliseconds));
             handler.postDelayed(this,0);
         }
@@ -50,7 +54,7 @@ public class StopwatchActivity extends BasicActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stopwatch);
-
+        Log.d("ap_stopwatch","onCreate");
         // Czy coś z tego da się przenieść do BasicActivity (nadklasa)
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -157,6 +161,51 @@ public class StopwatchActivity extends BasicActivity
         updateTime = 0L;
         lapsContainer.removeAllViews();
         lapsCounter = 1;
+    }
+
+
+
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        Log.d("ap_stopwatch","onPause");
+    }
+
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        Log.d("ap_stopwatch","onStart");
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        Log.d("ap_stopwatch","onResume");
+    }
+
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
+        Log.d("ap_stopwatch","onStop");
+    }
+
+    @Override
+    protected void onRestart()
+    {
+        super.onRestart();
+        Log.d("ap_stopwatch","onRestart");
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        Log.d("ap_stopwatch","onDestroy");
     }
 
 

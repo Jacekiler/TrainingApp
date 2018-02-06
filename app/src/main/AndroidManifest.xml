@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jacek.trainingapp">
+          package="com.example.jacek.trainingapp">
 
     <application
         android:allowBackup="true"
@@ -12,25 +12,26 @@
             android:name=".MainActivity"
             android:label="Training">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".TimersActivity"
-            android:label="Timery" />
+            android:label="Timery"/>
         <activity
             android:name=".StopwatchActivity"
-            android:label="Stoper" />
+            android:label="Stoper"/>
         <activity
             android:name=".CaloriesActivity"
-            android:label="Kalorie" />
+            android:label="Kalorie"/>
         <activity
             android:name=".CalculatorsActivity"
-            android:label="Kalkulatory" />
-        <activity android:name=".CalculatorBMI" />
-        <activity android:name=".CalculatorBMR"></activity>
+            android:label="Kalkulatory"/>
+        <activity
+            android:name=".TimetableActivity"
+            android:label="Dziennik"/>
     </application>
 
 </manifest>

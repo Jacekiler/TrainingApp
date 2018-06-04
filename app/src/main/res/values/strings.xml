@@ -1,4 +1,16 @@
 <resources>
+    <string name="nav_home">Strona główna</string>
+    <string name="nav_stopwatch">Stoper</string>
+    <string name="nav_timers">Timery</string>
+    <string name="nav_calculators">Kalkulatory</string>
+    <string name="nav_calories">Tabele kalorii</string>
+    <string name="nav_exercises">Ćwiczenia</string>
+    <string name="nav_timetable">Dziennik treningowy</string>
+    <string name="nav_daily_calories">Dziennik kalorii</string>
+    <string name="nav_notepad">Notatnik</string>
+    <string name="nav_workouts">Zestawy ćwiczeń</string>
+
+
     <string name="app_name">TrainingApp</string>
     <string name="action_stopwatch">Stoper</string>
     <string name="title_activity_test">TestActivity</string>
@@ -11,12 +23,57 @@
 
     <string name="choose_calculator">wybierz</string>
 
+    <string name="min_value_message">To jest wartość minimalna</string>
+    <string name="plus_sign">+</string>
+    <string name="minus_sign">-</string>
+
     <string-array name="calculators_array">
         <item>BMI</item>
         <item>BMR</item>
+        <!--<item>Spalanie kalorii</item>-->
+    </string-array>
+
+    <string-array name="products_category_all">
+        <item>Wszystkie</item>
+        <item>Mięso</item>
+        <item>Nabiał</item>
+        <item>Napoje</item>
+        <item>Owoce</item>
+        <item>Pieczywo</item>
+        <item>Produkty zbożowe</item>
+        <item>Słodycze, przekąski</item>
+        <item>Warzywa</item>
+        <item>Inne</item>
+    </string-array>
+
+    <string-array name="products_category">
+        <item>Mięso</item>
+        <item>Nabiał</item>
+        <item>Napoje</item>
+        <item>Owoce</item>
+        <item>Pieczywo</item>
+        <item>Produkty zbożowe</item>
+        <item>Słodycze, przekąski</item>
+        <item>Warzywa</item>
+        <item>Inne</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="stoper">Stoper</string>
+    <string name="timery">Timery</string>
+    <string name="kalkulatory">Kalkulatory</string>
+    <string name="tabele_kalorii">Tabele kalorii</string>
+    <string name="dziennik_kalorii">Dziennik kalorii</string>
+    <string name="wiczenia">Ćwiczenia</string>
+    <string name="zestawy_wicze">Zestawy ćwiczeń</string>
+    <string name="dziennik_treningowy">Dziennik treningowy</string>
+    <string name="notatnik">Notatnik</string>
+    <string name="severely_underweight">Wychudzenie</string>
+    <string name="underweight">Niedowaga</string>
+    <string name="normal_weight">Wartość prawidłowa</string>
+    <string name="overweight">Nadwaga</string>
+    <string name="obesity">Otyłość</string>
 
 </resources>
+

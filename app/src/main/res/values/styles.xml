@@ -1,11 +1,41 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppThemeBlue" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimaryBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkBlue</item>
+        <item name="android:colorBackground">@color/lightBlue</item>
+        <item name="android:colorButtonNormal">@color/colorPrimaryBlue</item>
+        <item name="floatingButtonColor">@color/colorPrimaryBlue</item>
+        <item name="cardViewColor">@color/panelBlue</item>
+        <item name="android:colorAccent">@color/colorAccentBlue</item>
+        <item name="listItemPressed">@color/lightBluePressed</item>
+        <item name="exercisePanel">@color/panelBlue</item>
+        <item name="tabColor">@color/tabBlue</item>
+    </style>
+
+    <style name="AppThemeGreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryGreen</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkGreen</item>
+        <item name="android:colorBackground">@color/lightGreen</item>
+        <item name="android:colorButtonNormal">@color/colorPrimaryGreen</item>
+        <item name="floatingButtonColor">@color/colorPrimaryGreen</item>
+        <item name="cardViewColor">@color/panelGreen</item>
+        <item name="android:colorAccent">@color/colorAccentGreen</item>
+        <item name="listItemPressed">@color/lightGreenPressed</item>
+        <item name="exercisePanel">@color/panelGreen</item>
+        <item name="tabColor">@color/tabGreen</item>
+    </style>
+
+
+    <style name="AppThemeMaterial" parent="Theme.AppCompat.NoActionBar">
+
+    </style>
+
+    <style name="a" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_material_light_1</item>
     </style>
 
 

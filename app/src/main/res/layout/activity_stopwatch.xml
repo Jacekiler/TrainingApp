@@ -4,19 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/stopwatch_layout"
-    tools:openDrawer="start"
+    tools:openDrawer="end"
     >
 
 
-    <include layout="@layout/app_bar_stopwatch"
-        android:layout_height="match_parent"
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        />
+        android:layout_height="match_parent"
+        >
+
+        <include layout="@layout/app_bar_schema"/>
+
+        <include layout="@layout/content_stopwatch"/>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+
 
 
     <include layout="@layout/navigation_view"/>
-
-
 
 </android.support.v4.widget.DrawerLayout>
 

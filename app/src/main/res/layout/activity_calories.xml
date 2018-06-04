@@ -4,18 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/calories_layout"
-    tools:openDrawer="start"
+    tools:openDrawer="end"
     >
 
 
-
-
-
-
-    <include layout="@layout/app_bar_calories"
-        android:layout_height="match_parent"
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        />
+        android:layout_height="match_parent"
+        >
+
+        <include layout="@layout/app_bar_schema"/>
+
+        <include layout="@layout/content_calories"/>
+
+
+    </android.support.design.widget.CoordinatorLayout>
 
 
     <include layout="@layout/navigation_view"/>

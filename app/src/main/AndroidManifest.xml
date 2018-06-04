@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.jacek.trainingapp">
-
+    <uses-permission android:name="android.permission.VIBRATE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        android:theme="@style/AppThemeBlue"
+        >
         <activity
-            android:name=".MainActivity"
+            android:name=".main.MainActivity"
             android:label="Training">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -18,20 +19,76 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TimersActivity"
-            android:label="Timery"/>
+            android:name=".timers.TimersActivity"
+            android:label="Timery"
+            android:windowSoftInputMode="adjustNothing"
+            />
         <activity
-            android:name=".StopwatchActivity"
+            android:name=".stopwatch.StopwatchActivity"
             android:label="Stoper"/>
         <activity
-            android:name=".CaloriesActivity"
-            android:label="Kalorie"/>
+            android:name=".calculators.CalculatorsActivity"
+            android:label="Kalkulatory"
+            android:windowSoftInputMode="adjustNothing"
+            />
         <activity
-            android:name=".CalculatorsActivity"
-            android:label="Kalkulatory"/>
+            android:name=".productsAndCalories.calories.CaloriesActivity"
+            android:label="Kalorie"
+            android:windowSoftInputMode="adjustNothing"
+            />
         <activity
-            android:name=".TimetableActivity"
-            android:label="Dziennik"/>
+            android:name=".physicalActivity.exercises.ExercisesActivity"
+            android:label="Ćwiczenia"/>
+        <activity
+            android:name=".physicalActivity.timetable.TimetableActivity"
+            android:label="Dziennik treningów"
+            />
+        <activity
+            android:name=".timers.interval.ITRunner"
+            android:label=""
+            />
+        <activity
+            android:name=".timers.interval.ITFavouritesActivity"
+            android:label="Ulubione"
+            />
+        <activity
+            android:name=".productsAndCalories.dailyCalories.DailyCaloriesActivity"
+            android:label="Dziennik kalorii"
+            />
+        <activity
+            android:name=".notepad.NotepadActivity"
+            android:label="Notatki"
+            />
+        <activity android:name=".physicalActivity.exercises.SpecifiedExercisesActivity"/>
+        <activity
+            android:name=".physicalActivity.workouts.WorkoutsActivity"
+            android:label="Zestawy"
+            />
+        <activity
+            android:name=".productsAndCalories.dailyCalories.DailyCaloriesDetailsActivity"
+            android:label="Szczegóły"
+            />
+        <activity
+            android:name=".notepad.NoteDetailsActivity"
+            android:label="Notatka"
+            />
+        <activity
+            android:name=".physicalActivity.workouts.interval.ChosenIntervalWorkoutActivity"
+            android:label="Zestaw"
+            />
+        <activity
+            android:name=".physicalActivity.workouts.simple.ChosenSimpleWorkoutActivity"
+            android:label="Zestaw"
+            android:windowSoftInputMode="adjustNothing"
+            />
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="Ustawienia"
+            />
+        <activity
+            android:name=".common.AuthorContactActivity"
+            android:label="Kontakt"
+            />
     </application>
 
 </manifest>

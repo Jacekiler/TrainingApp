@@ -9,10 +9,16 @@
         <item name="android:colorButtonNormal">@color/colorPrimaryBlue</item>
         <item name="floatingButtonColor">@color/colorPrimaryBlue</item>
         <item name="cardViewColor">@color/panelBlue</item>
-        <item name="android:colorAccent">@color/colorAccentBlue</item>
+        <item name="colorAccent">@color/colorPrimaryDarkBlue</item>
         <item name="listItemPressed">@color/lightBluePressed</item>
         <item name="exercisePanel">@color/panelBlue</item>
         <item name="tabColor">@color/tabBlue</item>
+        <item name="ic_minus_sign">@drawable/ic_minus_sign</item>
+        <item name="ic_plus_sign">@drawable/ic_plus_sign</item>
+        <item name="ic_timer_add">@drawable/ic_timer_add</item>
+        <item name="ic_timer_list">@drawable/ic_timer_list</item>
+        <item name="ic_set_default">@drawable/ic_set_default</item>
+        <item name="tabsTextColor">@color/black</item>
     </style>
 
     <style name="AppThemeGreen" parent="Theme.AppCompat.Light.NoActionBar">
@@ -23,20 +29,59 @@
         <item name="android:colorButtonNormal">@color/colorPrimaryGreen</item>
         <item name="floatingButtonColor">@color/colorPrimaryGreen</item>
         <item name="cardViewColor">@color/panelGreen</item>
-        <item name="android:colorAccent">@color/colorAccentGreen</item>
+        <item name="colorAccent">@color/colorPrimaryDarkGreen</item>
         <item name="listItemPressed">@color/lightGreenPressed</item>
         <item name="exercisePanel">@color/panelGreen</item>
         <item name="tabColor">@color/tabGreen</item>
+        <item name="ic_minus_sign">@drawable/ic_minus_sign</item>
+        <item name="ic_plus_sign">@drawable/ic_plus_sign</item>
+        <item name="ic_timer_add">@drawable/ic_timer_add</item>
+        <item name="ic_timer_list">@drawable/ic_timer_list</item>
+        <item name="ic_set_default">@drawable/ic_set_default</item>
+        <item name="tabsTextColor">@color/black</item>
     </style>
 
 
-    <style name="AppThemeMaterial" parent="Theme.AppCompat.NoActionBar">
 
+    <style name="AppThemeWhite" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDarkBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkerBlue</item>
+        <item name="android:colorBackground">@color/colorWhite</item>
+        <item name="colorButtonNormal">@color/colorPrimaryDarkBlue</item>
+        <item name="floatingButtonColor">@color/colorPrimaryDarkBlue</item>
+        <!--<item name="cardViewColor">@color/colorPrimaryDarkBlue</item>-->
+        <item name="colorAccent">@color/colorPrimaryDarkBlue</item>
+        <item name="listItemPressed">#efefefef</item>
+        <item name="exercisePanel">@color/colorPrimaryDarkBlue</item>
+        <item name="tabColor">@color/colorPrimaryDarkBlue</item>
+        <item name="buttonStyle">@style/ButtonTextColor</item>
+        <item name="alertDialogTheme">@style/AppCompatTextColor</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="ic_minus_sign">@drawable/ic_minus_sign_white</item>
+        <item name="ic_plus_sign">@drawable/ic_plus_sign_white</item>
+        <item name="ic_timer_add">@drawable/ic_timer_add_white</item>
+        <item name="ic_timer_list">@drawable/ic_timer_list_white</item>
+        <item name="ic_set_default">@drawable/ic_set_default_white</item>
+        <item name="tabsTextColor">@color/colorWhite</item>
     </style>
 
-    <style name="a" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/primary_material_light_1</item>
+    <style name="tabItem" parent="Widget.Design.TabLayout">
+        <item name="android:textColor">@color/colorWhite</item>
     </style>
+
+
+
+    <style name="AppCompatTextColor" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="ButtonTextColor" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
 
 
 </resources>

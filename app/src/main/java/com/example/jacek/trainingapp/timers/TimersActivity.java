@@ -8,14 +8,14 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.widget.Toast;
 
+import com.example.jacek.trainingapp.common.Utils;
 import com.example.jacek.trainingapp.interfaces.TimersInterfaces;
 import com.example.jacek.trainingapp.R;
 import com.example.jacek.trainingapp.common.BasicActivity;
-import com.example.jacek.trainingapp.common.Utilities;
-import com.example.jacek.trainingapp.timers.interval.IT;
-import com.example.jacek.trainingapp.timers.interval.ITCard;
-import com.example.jacek.trainingapp.timers.interval.ITData;
-import com.example.jacek.trainingapp.timers.simple.SimpleTimer;
+import com.example.jacek.trainingapp.timers.interval.IntervalTimerFragment;
+import com.example.jacek.trainingapp.timers.interval.IntervalTimerCard;
+import com.example.jacek.trainingapp.timers.interval.IntervalTimerData;
+import com.example.jacek.trainingapp.timers.simple.SimpleTimerFragment;
 
 public class TimersActivity extends BasicActivity implements TimersInterfaces
 {
@@ -34,16 +34,17 @@ public class TimersActivity extends BasicActivity implements TimersInterfaces
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
 
+
         initializeUI();
         activityType = getIntent().getExtras().getString("type");
-        pagerAdapter.addFragment(new SimpleTimer(),"Zwykły");
-        pagerAdapter.addFragment(new IT(), "Interwały");
+        pagerAdapter.addFragment(new SimpleTimerFragment(),"Zwykły");
+        pagerAdapter.addFragment(new IntervalTimerFragment(), "Interwały");
         viewPager.setAdapter(pagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
         Bundle args = new Bundle();
         args.putString("type", activityType);
 
-        if(activityType.equals(Utilities.ACTIVITY_TYPE_NORMAL))
+        if(activityType.equals(Utils.ACTIVITY_TYPE_NORMAL))
         {
             setNavViewAndToolbar(R.id.timers_layout);
         }
@@ -64,7 +65,7 @@ public class TimersActivity extends BasicActivity implements TimersInterfaces
     @Override
     public boolean onPrepareOptionsMenu(Menu menu)
     {
-        if(!activityType.equals(Utilities.ACTIVITY_TYPE_NORMAL))
+        if(!activityType.equals(Utils.ACTIVITY_TYPE_NORMAL))
         {
             menu.getItem(0).setVisible(false);
             menu.getItem(1).setVisible(false);
@@ -85,10 +86,10 @@ public class TimersActivity extends BasicActivity implements TimersInterfaces
 
 
     @Override
-    public void onAddIntervalClick(ITCard card)
+    public void onAddIntervalClick(IntervalTimerCard card)
     {
 
-        ITData intervalTimersData = new ITData(this);
+        IntervalTimerData intervalTimersData = new IntervalTimerData(this);
         intervalTimersData.open();
 
         if(intervalTimersData.add(card))
@@ -103,7 +104,7 @@ public class TimersActivity extends BasicActivity implements TimersInterfaces
     @Override
     public void onBackPressed()
     {
-        if(activityType.equals(Utilities.ACTIVITY_TYPE_NORMAL))
+        if(activityType.equals(Utils.ACTIVITY_TYPE_NORMAL))
         {
             super.onBackPressed();
         }

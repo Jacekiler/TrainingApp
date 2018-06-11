@@ -74,6 +74,9 @@
     <string name="normal_weight">Wartość prawidłowa</string>
     <string name="overweight">Nadwaga</string>
     <string name="obesity">Otyłość</string>
+    <string name="setWeightHeight">Podaj wagę i wzrost</string>
+    <string name="setWeight">Podaj wagę</string>
+    <string name="setHeight">Podaj wzrost</string>
 
 </resources>
 

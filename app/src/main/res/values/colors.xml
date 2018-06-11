@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimaryBlue">#4d61d1</color>
     <color name="colorPrimaryDarkBlue">#303F9F</color>
+    <color name="colorPrimaryDarkerBlue">#24309f</color>
     <color name="lightBlue">#60dfff</color>
     <color name="lightBluePressed">#56d1fd</color>
     <color name="colorAccentBlue">#19e9f1</color>
@@ -15,6 +16,8 @@
     <color name="colorAccentGreen">#04ff00</color>
     <color name="panelGreen">#28d92b</color>
     <color name="tabGreen">#55f445</color>
+
+
 
     <color name="black">#000000</color>
     <color name="gray">#888888</color>

@@ -6,7 +6,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.jacek.trainingapp.calculators.CalculatorsActivity;
-import com.example.jacek.trainingapp.common.Utilities;
+import com.example.jacek.trainingapp.common.Utils;
 import com.example.jacek.trainingapp.notepad.NotepadActivity;
 import com.example.jacek.trainingapp.physicalActivity.exercises.ExercisesActivity;
 import com.example.jacek.trainingapp.physicalActivity.timetable.TimetableActivity;
@@ -27,51 +27,51 @@ public class MainActivity extends AppCompatActivity
         Intent intent;
         switch (startActivity)
         {
-            case Utilities.STOPWATCH_ACTIVITY_NAME:
+            case Utils.STOPWATCH_ACTIVITY_NAME:
             {
                 intent = new Intent(this, StopwatchActivity.class);
                 break;
             }
-            case Utilities.TIMERS_ACTIVITY_NAME:
+            case Utils.TIMERS_ACTIVITY_NAME:
             {
                 intent = new Intent(this,TimersActivity.class);
                 intent.putExtra("type","normal");
                 break;
             }
-            case Utilities.CALCULATORS_ACTIVITY_NAME:
+            case Utils.CALCULATORS_ACTIVITY_NAME:
             {
                 intent = new Intent(this,CalculatorsActivity.class);
                 break;
             }
-            case Utilities.CALORIES_ACTIVITY_NAME:
+            case Utils.CALORIES_ACTIVITY_NAME:
             {
                 intent = new Intent(this,CaloriesActivity.class);
                 intent.putExtra("type","normal");
                 break;
             }
-            case Utilities.DAILY_CALORIES_ACTIVITY_NAME:
+            case Utils.DAILY_CALORIES_ACTIVITY_NAME:
             {
                 intent = new Intent(this,DailyCaloriesActivity.class);
                 break;
             }
-            case Utilities.EXERCISES_ACTIVITY_NAME:
+            case Utils.EXERCISES_ACTIVITY_NAME:
             {
                 intent = new Intent(this,ExercisesActivity.class);
                 intent.putExtra("type","normal");
                 break;
             }
-            case Utilities.WORKOUTS_ACTIVITY_NAME:
+            case Utils.WORKOUTS_ACTIVITY_NAME:
             {
                 intent = new Intent(this,WorkoutsActivity.class);
                 intent.putExtra("type","normal");
                 break;
             }
-            case Utilities.TIMETABLE_ACTIVITY_NAME:
+            case Utils.TIMETABLE_ACTIVITY_NAME:
             {
                 intent = new Intent(this,TimetableActivity.class);
                 break;
             }
-            case Utilities.NOTEPAD_ACTIVITY_NAME:
+            case Utils.NOTEPAD_ACTIVITY_NAME:
             {
                 intent = new Intent(this,NotepadActivity.class);
                 break;

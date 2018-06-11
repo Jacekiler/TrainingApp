@@ -11,10 +11,10 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.example.jacek.trainingapp.common.Utils;
 import com.example.jacek.trainingapp.interfaces.CaloriesInterfaces;
 import com.example.jacek.trainingapp.R;
 import com.example.jacek.trainingapp.common.BasicActivity;
-import com.example.jacek.trainingapp.common.Utilities;
 import com.example.jacek.trainingapp.productsAndCalories.ProductsAndCaloriesData;
 import com.example.jacek.trainingapp.productsAndCalories.dailyCalories.DailyCaloriesDetails;
 
@@ -25,7 +25,7 @@ public class CaloriesActivity extends BasicActivity implements CaloriesInterface
     private Spinner categorySpinner;
 
     private RecyclerView recycler;
-    private CaloriesRecyclerAdapter recyclerAdapter;
+    private CaloriesAdapter recyclerAdapter;
     private ProductsAndCaloriesData productsAndCaloriesData;
 
     private String activityType;
@@ -44,17 +44,17 @@ public class CaloriesActivity extends BasicActivity implements CaloriesInterface
 
 
 
-        if(activityType.equals(Utilities.ACTIVITY_TYPE_NORMAL))
+        if(activityType.equals(Utils.ACTIVITY_TYPE_NORMAL))
         {
             setNavViewAndToolbar(R.id.calories_layout);
-            recyclerAdapter = new CaloriesRecyclerAdapter(this, productsAndCaloriesData, activityType);
+            recyclerAdapter = new CaloriesAdapter(this, productsAndCaloriesData, activityType);
         }
         else
         {
             toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            recyclerAdapter = new CaloriesRecyclerAdapter(this, productsAndCaloriesData, activityType, getIntent().getExtras().getString("date"));
+            recyclerAdapter = new CaloriesAdapter(this, productsAndCaloriesData, activityType, getIntent().getExtras().getString("date"));
         }
 
         recycler.setAdapter(recyclerAdapter);
@@ -122,7 +122,7 @@ public class CaloriesActivity extends BasicActivity implements CaloriesInterface
     @Override
     public boolean onPrepareOptionsMenu(Menu menu)
     {
-        if(!activityType.equals(Utilities.ACTIVITY_TYPE_NORMAL))
+        if(!activityType.equals(Utils.ACTIVITY_TYPE_NORMAL))
         {
             menu.getItem(0).setVisible(false);
             menu.getItem(1).setVisible(false);
@@ -186,7 +186,7 @@ public class CaloriesActivity extends BasicActivity implements CaloriesInterface
     @Override
     public void onBackPressed()
     {
-        if(activityType.equals(Utilities.ACTIVITY_TYPE_NORMAL))
+        if(activityType.equals(Utils.ACTIVITY_TYPE_NORMAL))
         {
             super.onBackPressed();
         }
@@ -202,6 +202,8 @@ public class CaloriesActivity extends BasicActivity implements CaloriesInterface
         super.onDestroy();
         productsAndCaloriesData.close();
     }
+
+
 
 
 

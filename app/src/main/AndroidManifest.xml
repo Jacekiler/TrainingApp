@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.example.jacek.trainingapp">
     <uses-permission android:name="android.permission.VIBRATE"/>
     <application
@@ -44,11 +45,11 @@
             android:label="Dziennik treningów"
             />
         <activity
-            android:name=".timers.interval.ITRunner"
+            android:name=".timers.interval.IntervalTimerRunner"
             android:label=""
             />
         <activity
-            android:name=".timers.interval.ITFavouritesActivity"
+            android:name=".timers.interval.IntervalTimerFavouritesActivity"
             android:label="Ulubione"
             />
         <activity
@@ -63,6 +64,7 @@
         <activity
             android:name=".physicalActivity.workouts.WorkoutsActivity"
             android:label="Zestawy"
+            android:windowSoftInputMode="adjustNothing"
             />
         <activity
             android:name=".productsAndCalories.dailyCalories.DailyCaloriesDetailsActivity"
@@ -90,5 +92,6 @@
             android:label="Kontakt"
             />
     </application>
+
 
 </manifest>

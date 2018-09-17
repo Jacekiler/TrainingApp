@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    >
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView33"
+        android:gravity="center_vertical"
+        android:text="Przygotowanie:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toStartOf="@id/editDefaultWorkDialog"
+        android:layout_alignBottom="@id/editDefaultWorkDialog"
+        android:layout_below="@+id/textView27"
+        android:gravity="center_vertical"
+        android:text="Praca:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toStartOf="@id/editDefaultRestDialog"
+        android:layout_alignBottom="@id/editDefaultRestDialog"
+        android:layout_below="@+id/textView32"
+        android:gravity="center_vertical"
+        android:text="Przerwa:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toStartOf="@id/editDefaultExercisesDialog"
+        android:layout_alignBottom="@id/editDefaultExercisesDialog"
+        android:layout_below="@+id/textView33"
+        android:gravity="center_vertical"
+        android:text="Liczba ćwiczeń:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toStartOf="@id/editDefaultSetsDialog"
+        android:layout_alignBottom="@id/editDefaultSetsDialog"
+        android:layout_below="@+id/textView34"
+        android:gravity="center_vertical"
+        android:text="Liczba serii:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_alignBottom="@id/editDefaultSetsRestDialog"
+        android:layout_below="@+id/textView35"
+        android:gravity="center_vertical"
+        android:text="Przerwa między seriami:"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toStartOf="@id/editDefaultCoolingDialog"
+        android:layout_alignBottom="@id/editDefaultCoolingDialog"
+        android:layout_below="@+id/textView36"
+        android:layout_toEndOf="@id/textView36"
+        android:gravity="center_vertical"
+        android:text="Schłodzenie:"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editDefaultPrepareDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView36"
+        android:background="@android:color/transparent"
+        android:ems="2"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editDefaultWorkDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView27"
+        android:layout_toEndOf="@+id/textView36"
+        android:background="@android:color/transparent"
+        android:ems="2"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editDefaultRestDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView32"
+        android:layout_toEndOf="@+id/textView36"
+        android:background="@android:color/transparent"
+        android:ems="2"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editDefaultExercisesDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView33"
+        android:layout_toEndOf="@+id/textView36"
+        android:background="@android:color/transparent"
+        android:ems="2"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editDefaultSetsDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView34"
+        android:layout_toEndOf="@+id/textView36"
+        android:background="@android:color/transparent"
+        android:ems="2"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editDefaultSetsRestDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editDefaultSetsDialog"
+        android:layout_toEndOf="@+id/textView36"
+        android:background="@android:color/transparent"
+        android:ems="2"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/editDefaultCoolingDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editDefaultSetsRestDialog"
+        android:layout_toEndOf="@+id/textView36"
+        android:background="@android:color/transparent"
+        android:ems="2"
+        android:gravity="center"
+        android:inputType="number"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

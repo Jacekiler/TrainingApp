@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/simple_timer_fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/app_bar_timers_spinner_height"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <EditText
+        android:id="@+id/hoursSimpleTimer"
+        android:layout_width="@dimen/simple_timer_square_dimen"
+        android:layout_height="@dimen/simple_timer_square_dimen"
+        android:layout_alignTop="@+id/editText2"
+        android:layout_toStartOf="@+id/editText2"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="00"
+        android:textSize="32sp"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_timer_square_dimen"
+        android:layout_alignTop="@+id/minutesSimpleTimer"
+        android:layout_toStartOf="@+id/minutesSimpleTimer"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:inputType="number"
+        android:text=":"
+        android:textSize="26sp"/>
+
+    <EditText
+        android:id="@+id/minutesSimpleTimer"
+        android:layout_width="@dimen/simple_timer_square_dimen"
+        android:layout_height="@dimen/simple_timer_square_dimen"
+        android:layout_below="@+id/addMinuteSimpleTimer"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="01"
+        android:textSize="32sp"/>
+
+    <EditText
+        android:id="@+id/secondsSimpleTimer"
+        android:layout_width="@dimen/simple_timer_square_dimen"
+        android:layout_height="@dimen/simple_timer_square_dimen"
+        android:layout_alignTop="@+id/editText2"
+        android:layout_toEndOf="@+id/editText6"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="00"
+        android:textSize="32sp"/>
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/simple_timer_square_dimen"
+        android:layout_alignTop="@+id/editText2"
+        android:layout_toEndOf="@+id/minutesSimpleTimer"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:inputType="number"
+        android:text=":"
+        android:textSize="26sp"/>
+
+    <Button
+        android:id="@+id/addHourSimpleTimer"
+        android:layout_width="@dimen/simple_timer_square_dimen"
+        android:layout_height="@dimen/simple_timer_square_dimen"
+        android:layout_above="@+id/editText2"
+        android:layout_toStartOf="@+id/editText2"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/plus_minus_simple_timer_size"
+        android:text="+"/>
+
+    <Button
+        android:id="@+id/addMinuteSimpleTimer"
+        android:layout_width="@dimen/simple_timer_square_dimen"
+        android:layout_height="@dimen/simple_timer_square_dimen"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/plus_minus_simple_timer_size"
+        android:text="+"/>
+
+    <Button
+        android:id="@+id/addSecondSimpleTimer"
+        android:layout_width="@dimen/simple_timer_square_dimen"
+        android:layout_height="@dimen/simple_timer_square_dimen"
+        android:layout_above="@+id/editText2"
+        android:layout_alignStart="@+id/secondsSimpleTimer"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/plus_minus_simple_timer_size"
+        android:text="+"/>
+
+    <Button
+        android:id="@+id/subHourSimpleTimer"
+        android:layout_width="@dimen/simple_timer_square_dimen"
+        android:layout_height="@dimen/simple_timer_square_dimen"
+        android:layout_below="@+id/editText2"
+        android:layout_toStartOf="@+id/editText2"
+        android:textSize="@dimen/plus_minus_simple_timer_size"
+        android:text="-"/>
+
+    <Button
+        android:id="@+id/subMinuteSimpleTimer"
+        android:layout_width="@dimen/simple_timer_square_dimen"
+        android:layout_height="@dimen/simple_timer_square_dimen"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/plus_minus_simple_timer_size"
+        android:text="-"/>
+
+    <Button
+        android:id="@+id/subSecondSimpleTimer"
+        android:layout_width="@dimen/simple_timer_square_dimen"
+        android:layout_height="@dimen/simple_timer_square_dimen"
+        android:layout_alignStart="@+id/secondsSimpleTimer"
+        android:layout_below="@+id/editText2"
+        android:textSize="@dimen/plus_minus_simple_timer_size"
+        android:text="-"/>
+
+    <Button
+        android:id="@+id/startSimpleTimer"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Start"
+        android:textSize="16sp"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/stopSimpleTimer"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Stop"
+        android:textSize="16sp"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>

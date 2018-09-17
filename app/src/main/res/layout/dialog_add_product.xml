@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <EditText
+        android:id="@+id/nameEditTextAddDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameTextViewAddDialog"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="135dp"/>
+
+    <EditText
+        android:id="@+id/caloriesEditTextAddDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caloriesTextViewAddDialog"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/nameTextViewAddDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="nazwa"/>
+
+    <TextView
+        android:id="@+id/caloriesTextViewAddDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameEditTextAddDialog"
+        android:layout_centerHorizontal="true"
+        android:text="kalorie"/>
+
+    <TextView
+        android:id="@+id/categoryTextViewAddDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caloriesEditTextAddDialog"
+        android:layout_centerHorizontal="true"
+        android:text="Kategoria"/>
+
+    <Spinner
+        android:id="@+id/categorySpinnerAddDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/products_category"
+        android:layout_alignStart="@id/caloriesEditTextAddDialog"
+        android:layout_alignEnd="@id/caloriesEditTextAddDialog"
+        android:layout_below="@+id/categoryTextViewAddDialog"/>
+
+    <TextView
+        android:id="@+id/unitTextViewAddDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/categorySpinnerAddDialog"
+        android:layout_centerHorizontal="true"
+        android:text="Jednostka"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/gTextViewAddDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/nameTextViewAddDialog"
+        android:layout_below="@+id/unitTextViewAddDialog"
+        android:text="g"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/mlTextViewAddDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/nameTextViewAddDialog"
+        android:layout_below="@+id/unitTextViewAddDialog"
+        android:text="ml"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

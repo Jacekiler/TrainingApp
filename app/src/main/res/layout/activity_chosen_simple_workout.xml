@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".physicalActivity.workouts.simple.ChosenSimpleWorkoutActivity">
+
+    <include layout="@layout/app_bar_schema"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chosenSimpleWorkoutRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@id/addExerciseToSimpleWorkout"
+        android:layout_marginEnd="50dp"
+        android:layout_below="@id/addTrainingFromSimpleWorkout"
+        android:layout_marginStart="50dp"
+        />
+
+    <Button
+        android:id="@+id/addExerciseToSimpleWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Dodaj ćwiczenie"/>
+
+    <TextView
+        android:id="@+id/chosenSimpleWorkoutName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:text="TextView"/>
+
+
+
+    <TextView
+        android:id="@+id/deleteSimpleWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/chosenSimpleWorkoutName"
+        android:layout_marginStart="-50dp"
+        android:layout_toEndOf="@+id/chosenSimpleWorkoutRecycler"
+        android:background="@drawable/ic_delete"/>
+
+    <TextView
+        android:id="@+id/addTrainingFromSimpleWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/chosenSimpleWorkoutName"
+        android:layout_marginEnd="-50dp"
+        android:layout_toStartOf="@+id/chosenSimpleWorkoutRecycler"
+        android:background="@drawable/ic_plus_sign"/>
+
+</RelativeLayout>

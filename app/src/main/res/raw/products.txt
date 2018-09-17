@@ -1,0 +1,23 @@
+Jabłko,50,Owoce
+Banan,97,Owoce
+Truskawki,33,Owoce
+Borówki,57,Owoce
+Kiwi,61,Owoce
+Marchew,41,Warzywa
+Pomidor,18,Warzywa
+Jajko surowe,140,Nabiał
+Piersi z kurczaka,121,Mięso
+Polędwiczki z kurczaka,99,Mięso
+Coca-Cola,42,Napoje
+Sok pomarańczowy wyciskany,45,Napoje
+Sprite,9,Napoje
+Bułka z dynią,216,Pieczywo
+Kajzerka wieloziarnista,198,Pieczywo
+Bułka pszenna,270,Pieczywo
+Bułka ciabatta,256,Pieczywo
+Ser gouda,334,Nabiał
+Masło,744,Nabiał
+orzeszki ziemne,600,Inne
+Ziemniaki,77,Inne
+Czosnek,150,Warzywa
+Buraki,40,Warzywa

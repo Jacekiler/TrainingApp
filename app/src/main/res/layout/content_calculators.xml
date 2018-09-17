@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/app_bar_height"
+    tools:showIn="@layout/activity_calculators">
+
+
+    <Spinner
+        android:id="@+id/calculatorChooseSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:entries="@array/calculators_array"
+        android:prompt="@string/choose_calculator"
+        android:spinnerMode="dialog"/>
+
+    <FrameLayout
+        android:id="@+id/calculator_choose_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/calculatorChooseSpinner"
+        android:layout_centerHorizontal="true">
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

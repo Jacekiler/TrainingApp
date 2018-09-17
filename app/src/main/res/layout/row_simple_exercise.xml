@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/calories_textview"
+
+    >
+
+    <TextView
+        android:id="@+id/simpleExerciseTextViewRow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/simpleRepsEditTextRow"
+        android:layout_toStartOf="@+id/simpleRepsEditTextRow"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/simpleRepsEditTextRow"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:ems="2"
+        android:gravity="center"
+        android:inputType="number"
+        android:text="66"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_stopwatch"
+            android:title="@string/nav_stopwatch"/>
+        <item
+            android:id="@+id/nav_timers"
+            android:title="@string/nav_timers" />
+        <item
+            android:id="@+id/nav_calculators"
+            android:title="@string/nav_calculators" />
+        <item
+            android:id="@+id/nav_calories"
+            android:title="@string/nav_calories" />
+        <item
+            android:id="@+id/nav_daily_calories"
+            android:title="@string/nav_daily_calories" />
+        <item
+            android:id="@+id/nav_exercises"
+            android:title="@string/nav_exercises"/>
+        <item
+            android:id="@+id/nav_workouts"
+            android:title="@string/nav_workouts"/>
+        <item
+            android:id="@+id/nav_timetable"
+            android:title="@string/nav_timetable" />
+
+        <item
+            android:id="@+id/nav_notepad"
+            android:title="@string/nav_notepad"/>
+
+    </group>
+
+
+
+
+</menu>

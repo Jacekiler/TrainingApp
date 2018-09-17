@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="default_interval_timer_prepare">10</integer>
+    <integer name="default_interval_timer_work">20</integer>
+    <integer name="default_interval_timer_rest">10</integer>
+    <integer name="default_interval_timer_exercises">8</integer>
+    <integer name="default_interval_timer_sets">4</integer>
+    <integer name="default_interval_timer_setsRest">0</integer>
+    <integer name="default_interval_timer_cooling">0</integer>
+</resources>

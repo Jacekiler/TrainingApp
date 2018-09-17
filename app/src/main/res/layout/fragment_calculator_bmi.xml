@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_bmi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    tools:context="com.example.jacek.trainingapp.calculators.CalculatorBMIFragment">
+
+
+    <EditText
+        android:id="@+id/weightEditTextBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:ems="3"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/heightEditTextBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weightEditTextBMI"
+        android:layout_centerHorizontal="true"
+        android:ems="3"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/weightTextViewBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/weightEditTextBMI"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="91dp"
+        android:gravity="center_vertical"
+        android:text="Masa"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/heightTextViewBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/heightEditTextBMI"
+        android:layout_alignEnd="@+id/weightTextViewBMI"
+        android:gravity="center_vertical"
+        android:text="Wzrost"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/countButtonBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="154dp"
+        android:text="Oblicz"/>
+
+
+    <TextView
+        android:id="@+id/coolingTextViewIntervalTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="227dp"
+        android:text="Wynik:"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/coolingTextViewIntervalTimer"
+        android:layout_centerHorizontal="true">
+
+
+        <TextView
+            android:id="@+id/resultTextViewBMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/effectTextViewBMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="75dp"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

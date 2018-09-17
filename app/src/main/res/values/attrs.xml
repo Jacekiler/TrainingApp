@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="floatingButtonColor" format="color|reference"/>
+    <attr name="cardViewColor" format="color|reference"/>
+    <attr name="listItemPressed" format="color|reference"/>
+    <attr name="exercisePanel" format="color|reference"/>
+    <attr name="tabColor" format="color|reference"/>
+    <attr name="tabsTextColor" format="reference"/>
+    <attr name="ic_minus_sign" format="reference"/>
+    <attr name="ic_plus_sign" format="reference"/>
+    <attr name="ic_set_default" format="reference"/>
+    <attr name="ic_timer_add" format="reference"/>
+    <attr name="ic_timer_list" format="reference"/>
+</resources>

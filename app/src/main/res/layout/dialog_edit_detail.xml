@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    >
+
+    <TextView
+        android:id="@+id/nameTVEditDetailDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Nazwa"/>
+
+    <EditText
+        android:id="@+id/nameETEditDetailDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameTVEditDetailDialog"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        />
+
+    <TextView
+        android:id="@+id/amountTVEditDetailDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kcalPerUnitEditDetail"
+        android:layout_centerHorizontal="true"
+        android:text="Ilość"/>
+
+    <EditText
+        android:id="@+id/amountETEditDetailDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/amountTVEditDetailDialog"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/caloriesTVEditDetailDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/amountETEditDetailDialog"
+        android:layout_centerHorizontal="true"
+        android:text="Kalorie"/>
+
+    <EditText
+        android:id="@+id/caloriesETEdidDetailDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caloriesTVEditDetailDialog"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/kcalPerUnitEditDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameETEditDetailDialog"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"/>
+</RelativeLayout>

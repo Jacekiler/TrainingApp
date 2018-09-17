@@ -1,0 +1,431 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/interval_timer_fragment"
+    android:layout_marginTop="@dimen/app_bar_timers_spinner_height"
+    >
+
+
+    <ScrollView
+        android:id="@+id/intervalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/startIntervalButtonIntervalTimer"
+        >
+
+        <LinearLayout
+            android:id="@+id/intervalScrollViewLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/interval_field_height"
+                android:background="@drawable/interval_timer_panel"
+                >
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/prepareMinusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/interval_button_from_left"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_minus_sign"
+
+                    />
+
+                <TextView
+                    android:id="@+id/prepareTextViewIntervalTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_textView_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Przygotowanie"
+
+                    />
+
+                <EditText
+                    android:id="@+id/prepareEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_editText_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="2"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="26sp"/>
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/preparePlusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/interval_button_from_right"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_plus_sign"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/interval_field_height"
+                android:background="@drawable/interval_timer_panel"
+                >
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/workMinusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/interval_button_from_left"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_minus_sign"/>
+
+                <TextView
+                    android:id="@+id/workTextViewIntervalTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_textView_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Praca"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/workEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="72dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="2"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="26sp"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/workPlusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/interval_button_from_right"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_plus_sign"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/interval_field_height"
+                android:background="@drawable/interval_timer_panel"
+                >
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/restMinusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/interval_button_from_left"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_minus_sign"/>
+
+                <TextView
+                    android:id="@+id/restTextViewIntervalTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_textView_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Odpoczynek"
+
+                    />
+
+                <EditText
+                    android:id="@+id/restEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_editText_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="2"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="26sp"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/restPlusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/interval_button_from_right"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_plus_sign"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/interval_field_height"
+                android:background="@drawable/interval_timer_panel"
+                >
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/exercisesMinusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/interval_button_from_left"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_minus_sign"/>
+
+                <TextView
+                    android:id="@+id/weightTextViewBMI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_textView_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Liczba ćwiczeń"
+
+                    />
+
+                <EditText
+                    android:id="@+id/exercisesEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_editText_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="2"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="26sp"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/exercisesPlusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/interval_button_from_right"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_plus_sign"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/interval_field_height"
+                android:background="@drawable/interval_timer_panel"
+                >
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/setsMinusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/interval_button_from_left"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_minus_sign"/>
+
+                <TextView
+                    android:id="@+id/setsTextViewIntervalTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_textView_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Liczba serii"
+
+                    />
+
+                <EditText
+                    android:id="@+id/setsEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_editText_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="2"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="26sp"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/setsPlusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/interval_button_from_right"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_plus_sign"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/interval_field_height"
+                android:background="@drawable/interval_timer_panel"
+                >
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/setsRestMinusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/interval_button_from_left"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_minus_sign"/>
+
+                <TextView
+                    android:id="@+id/setsRestTextViewIntervalTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_textView_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Przerwa między seriami"
+
+                    />
+
+                <EditText
+                    android:id="@+id/setsRestEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_editText_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="2"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="26sp"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/setsRestPlusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/interval_button_from_right"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_plus_sign"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/interval_field_height"
+                android:background="@drawable/interval_timer_panel"
+                >
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/coolingMinusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/interval_button_from_left"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_minus_sign"/>
+
+                <TextView
+                    android:id="@+id/coolingTextViewIntervalTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_textView_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Schłodzenie"
+
+                    />
+
+                <EditText
+                    android:id="@+id/coolingEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/interval_editText_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:ems="2"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textSize="26sp"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/coolingPlusButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/interval_button_from_right"
+                    app:backgroundTint="?attr/floatingButtonColor"
+                    app:fabSize="normal"
+                    app:srcCompat="?attr/ic_plus_sign"/>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/startIntervalButtonIntervalTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Start"/>
+
+
+</RelativeLayout>

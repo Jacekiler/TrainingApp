@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/app_bar_height"
+    tools:showIn="@layout/activity_timetable"
+    >
+
+
+    <TextView
+        android:id="@+id/dateTimetable"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="24sp"/>
+
+
+
+
+    <Button
+        android:id="@+id/nextDateTimetable"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/dateTimetable"
+        android:layout_alignTop="@+id/dateTimetable"
+        android:layout_toEndOf="@+id/dateTimetable"
+        android:layout_marginStart="10dp"
+        android:text="+"/>
+
+    <Button
+        android:id="@+id/previousDateTimetable"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/dateTimetable"
+        android:layout_alignTop="@+id/dateTimetable"
+        android:layout_toStartOf="@+id/dateTimetable"
+        android:layout_marginEnd="10dp"
+        android:text="-"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewTimetable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addButtonTimetable"
+        android:layout_below="@id/dateTimetable"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:id="@+id/addButtonTimetable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Dodaj"/>
+</RelativeLayout>

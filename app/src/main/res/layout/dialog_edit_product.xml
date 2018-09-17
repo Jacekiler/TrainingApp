@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/nameTextViewEditDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="nazwa"/>
+
+    <EditText
+        android:id="@+id/nameEditTextEditDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameTextViewEditDialog"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        />
+
+    <TextView
+        android:id="@+id/caloriesTextViewEditDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp"
+        android:text="kalorie"/>
+
+    <EditText
+        android:id="@+id/caloriesEditTextEditDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caloriesTextViewEditDialog"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/categoryTextViewEditDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caloriesEditTextEditDialog"
+        android:layout_centerHorizontal="true"
+        android:text="Kategoria"/>
+
+    <Spinner
+        android:id="@+id/categorySpinnerEditDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/products_category"
+        android:layout_alignEnd="@id/caloriesEditTextEditDialog"
+        android:layout_alignStart="@id/caloriesEditTextEditDialog"
+        android:layout_below="@+id/categoryTextViewEditDialog"
+        />
+
+</RelativeLayout>

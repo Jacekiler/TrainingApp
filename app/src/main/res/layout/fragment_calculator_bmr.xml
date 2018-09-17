@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    tools:context="com.example.jacek.trainingapp.calculators.CalculatorBMRFragment">
+
+
+    <EditText
+        android:id="@+id/weightEditTextBMR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:ems="3"
+        android:inputType="numberDecimal"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="47dp"/>
+
+    <EditText
+        android:id="@+id/ageEditTextBMR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightEditTextBMR"
+        android:layout_centerHorizontal="true"
+        android:ems="3"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="109dp"/>
+
+    <EditText
+        android:id="@+id/heightEditTextBMR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weightEditTextBMR"
+        android:layout_centerHorizontal="true"
+        android:ems="3"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="109dp"/>
+
+    <TextView
+        android:id="@+id/weightTextViewBMR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/weightEditTextBMR"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="86dp"
+        android:text="Masa"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="66dp"/>
+
+    <TextView
+        android:id="@+id/ageTextViewBMR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ageEditTextBMR"
+        android:layout_alignEnd="@+id/weightTextViewBMR"
+        android:text="Wiek"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="124dp"/>
+
+    <TextView
+        android:id="@+id/heightTextViewBMR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/heightEditTextBMR"
+        android:layout_alignEnd="@+id/weightTextViewBMR"
+        android:text="Wzrost"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="124dp"/>
+
+    <RelativeLayout
+        android:id="@+id/chooseSexLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/weightTextViewBMR"
+        android:layout_marginTop="188dp">
+
+
+        <TextView
+            android:id="@+id/manTextViewBMR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MEZCZYZNA"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/womanTextViewBMR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="107dp"
+            android:text="KOBIETA"
+            android:textColor="@color/gray"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/countButtonBMR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="226dp"
+        android:text="Oblicz"/>
+
+    <TextView
+        android:id="@+id/resultLabelTextViewBMR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countButtonBMR"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Wynik:"/>
+
+    <TextView
+        android:id="@+id/resultTextViewBMR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultLabelTextViewBMR"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"/>
+
+
+</RelativeLayout>

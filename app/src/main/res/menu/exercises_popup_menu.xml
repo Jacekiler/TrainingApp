@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/editExercise"
+        android:title="Edytuj"
+        />
+    <item
+        android:id="@+id/deleteExercise"
+        android:title="Usuń"
+        />
+    <item
+        android:id="@+id/addToWorkout"
+        android:title="Dodaj do zestawu"
+        />
+
+
+</menu>

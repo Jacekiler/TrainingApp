@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialogEditIntervalTimerRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:weightSum="5"
+
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="3"
+        >
+
+        <TextView
+            android:id="@+id/TextViewEditNameIT"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tv_et_height"
+            android:gravity="center"
+            android:text="Nazwa"
+            />
+
+        <TextView
+            android:id="@+id/TextViewEditPrepareIT"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tv_et_height"
+            android:gravity="center"
+            android:text="Przygotowanie"
+            />
+
+        <TextView
+            android:id="@+id/TextViewEditWorkIT"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tv_et_height"
+            android:gravity="center"
+            android:text="Praca"
+            />
+
+        <TextView
+            android:id="@+id/TextViewEditRestIT"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tv_et_height"
+            android:gravity="center"
+            android:text="Przerwa"
+            />
+
+        <TextView
+            android:id="@+id/TextViewEditExercisesIT"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tv_et_height"
+            android:gravity="center"
+            android:text="Liczba ćwiczeń"
+            />
+
+        <TextView
+            android:id="@+id/TextViewEditSetsIT"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tv_et_height"
+            android:gravity="center"
+            android:text="Liczba serii"
+            />
+
+        <TextView
+            android:id="@+id/TextViewEditSetsRestIT"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tv_et_height"
+            android:gravity="center"
+            android:text="Przerwa między seriami"
+            />
+
+        <TextView
+            android:id="@+id/TextViewEditCooling"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tv_et_height"
+            android:gravity="center"
+            android:text="Schłodzenie"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialogEditIntervalTimerChildWithEditTexts"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        >
+
+        <EditText
+            android:id="@+id/editNameIT"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tv_et_height"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/editPrepareIT"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tv_et_height"
+            android:ems="2"
+            android:layout_gravity="center"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/editWorkIT"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tv_et_height"
+            android:ems="2"
+            android:layout_gravity="center"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/editRestIT"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tv_et_height"
+            android:ems="2"
+            android:layout_gravity="center"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/editExercisesIT"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tv_et_height"
+            android:ems="2"
+            android:layout_gravity="center"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/editSetsIT"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tv_et_height"
+            android:ems="2"
+            android:layout_gravity="center"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/editSetsRestIT"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tv_et_height"
+            android:ems="2"
+            android:layout_gravity="center"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/editCoolingIT"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tv_et_height"
+            android:ems="2"
+            android:layout_gravity="center"
+            android:inputType="number"
+            />
+    </LinearLayout>
+</LinearLayout>
